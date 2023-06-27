@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 export const dbConnection = async (): Promise<void> => { 
     try {
         const dbURL = process.env.DB_URL;
-        console.log(process.env);
+        console.log(process.env.DB_URL);
         
         if (!dbURL) {
             throw new Error('La URL no está correctamente definida en los .env');
