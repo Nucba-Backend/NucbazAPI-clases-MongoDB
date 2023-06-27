@@ -1,3 +1,4 @@
+import { sendEmail } from "../mailer/mailer";
 import Usuario, { IUser } from "../models/usuario";
 
 
@@ -8,11 +9,8 @@ export const existeEmail = async (email: string):Promise<void> => {
 		throw new Error(`El correo ${email} ya está registrado`);
 	}
 
-
-	//Validacion a agregar la clase que viene
-
-	// if (existeMail && !existeMail.verified) {
-	// 	await sendEmail(email, existeMail.code as string)
-	// 	throw new Error(`El usuario ya está registrado. Se envío nuevamente código de verificacion a ${email}`);
-	// }
+	if (existeMail && !existeMail.verified) {
+		await sendEmail(email, existeMail.code as string)
+		throw new Error(`El usuario ya está registrado. Se envío nuevamente código de verificacion a ${email}`);
+	}
 };
