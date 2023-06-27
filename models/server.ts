@@ -4,7 +4,6 @@ import { dbConnection } from '../database/config';
 
 import authRoutes from "../routes/auth"
 
-
 export class Server {
 
     app: Express;
@@ -16,6 +15,7 @@ export class Server {
         this.port = process.env.PORT;
         this.authPath = '/auth';
 
+
         this.conectarDB();
 
         this.middlewares();
@@ -23,7 +23,6 @@ export class Server {
         this.routes();
     }
 
-    //Funcion que ejecuta la conexion a la DB de Mongo
     async conectarDB(): Promise<void> {
         await dbConnection();
     }
