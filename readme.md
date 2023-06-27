@@ -22,3 +22,7 @@ Para esta clase, se recomiendan los siguientes pasos:
 -Terminar de armar el controlador de register realizando console.log() cuando sea necesario para otorgarle ayuda visual al alumno.
 -Hacer hincapié en cómo llegan los headers, creacion de crypt y qué pasaría si queda algún error sin controlar.
 -Hacer notar que aún nos falta crear el código y enviar el mail con el código, lo cual haremos la siguiente clase.
+
+
+Se adjunta documentación de la API completa generada por postman:
+https://documenter.getpostman.com/view/24605289/2s93z9aMot
