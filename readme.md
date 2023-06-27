@@ -2,24 +2,22 @@ PARA ESTE PROYECTO RECOMENDAMOS IR AL RITMO QUE SEA NECESARIO PARA PODER PROBAR 
 
 Tener en cuenta que, en el package.json, las dependencias ya están instaladas. Sería ideal que fueran instalandose a medida que sean necesarias en el transcurso de las clases.
 
+Esta es la última clase de creación de la API, siendo la proxima clase la de integracion con un front real.
+
 Para esta clase, se recomiendan los siguientes pasos:
 
-Para utilizar nodemailer se recomienda crear previamente una nueva casilla de gmail para trabajar con la misma.
+-Crear modelo de orden. Se puede tomar como referencia el POST /orders mostrado en https://nucbaz-api.vercel.app/ para mostrar a los alumnos
 
--Hablar sobre nodemailer y configurar el mailer.ts.
+-Crear la ruta para las ordenes, tanto en Server como en routes. Por el momento sin middlewares. (Agregarlos luego de crear el inicio el controlador para explicar la necesidad de validar el JWT y de saber el id del usuario)
 
--Aplicar en el controlador del register.
+-Crear controlador para el get, luego de recibir la data, crear los middlewares en la ruta y terminar con el controlador.
 
-\*A tener en cuenta: Si se pone como contraseña la contraseña del mail, al querer utilizar nodemailer, el mismo arrojara un error. Es totalmente normal por seguridad de gmail. Seguir el link que nos provee el error y seguir los pasos. Básicamente, vamos a tener que habilitar la autenticacion en dos pasos y luego ir a la opcion de generar clave para aplicaciones, esta clave es la que tenemos que poner en la configuracion del mailer. Probablemente el mail que enviemos llegue a spam. Explicar que esto se debe a dos factores. El servidor del cual enviamos el mail (localhost) y el cuerpo del mismo, al cual le falta trabajo.
+-Para el controlador del post, seguir los mismos pasos.
 
--Recordar cambiar la funcion en "validacionesDB.ts" luego de configurar el mailer.
+-Crear modelo del Issue. (Esto será un "Reporte de problema" que solo pueden crear los usuarios con rol de admin)
 
--Crear controlador de login para que reciba la data del usuario.
+-Crear la ruta para las issues, tanto en Server como en routes.
 
--No olvidar crear el router y middlewares necesarios. (Esto se recomienda ni bien se crea el controlador, cuando solo estamos recibiendo y, tal vez, logueando la data del front).
+-Crear controlador para postear un nuevo Issue.
 
--Crear controlador de verifyUser.
-
--No olvidar crear el router y middlewares necesarios. (Esto se recomienda ni bien se crea el controlador, cuando solo estamos recibiendo y, tal vez, logueando la data del front).
-
-SI POR ALGUN MOTIVO NO SE LLEGA A TERMINAR CON LOS TEMAS EN ESTA CLASE, QUEDA AUN UNA CLASE MAS PARA TERMINAR DE DESARROLLARLOS.
+CON ESTOS PASOS PODEMOS DAR POR CONCLUIDA LA API EN SU TOTALIDAD. LA PROXIMA CLASE SE INTEGRARA TODO ESTO EN UN FRONT PARA CERRAR EL CONCEPTO FULLSTACK.
