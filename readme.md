@@ -1,24 +1,23 @@
-En esta clase vamos a iniciar un proyecto que durará 4 clases.
-
-Es una API con la que el alumno está parcialmente familiarizado ya que se utilizó una API similar en el proyecto final del módulo de React.
-
 PARA ESTE PROYECTO RECOMENDAMOS IR AL RITMO QUE SEA NECESARIO PARA PODER PROBAR TODAS LAS VARIANTES Y ERRORES MEDIANTE CONSOLE.LOG() Y LA AYUDA DE POSTMAN
 
-Tener en cuenta que, en el package.json, as dependencias ya están instaladas. Sería ideal que fueran instalandose a medida que sean necesarias.
+Tener en cuenta que, en el package.json, las dependencias ya están instaladas. Sería ideal que fueran instalandose a medida que sean necesarias en el transcurso de las clases.
 
 Para esta clase, se recomiendan los siguientes pasos:
 
--Inicial el proyecto con los comandos de NPM y TSC. No olvidarse de configurar correctamente el tsconfig.
--Crear el app.ts.
--Crear el modelo del Server sin las rutas e instanciarlo en el app.ts
--Al utilizar variables de entorno en el Server, hablar sobre dotenv y realizar la configuracion en el app.ts.
--Crear el modelo de Usuario, con las siguientes aclaraciones:
-*Crearemos un objeto "ROLES" para no realizar comparacion con strings literales.
-*El campo "code" es porque crearemos un código que enviaremos por mail para que el usuario pueda verificarse.
--Armar en el modelo de Server lo referente a la ruta "auth".
--Comenzar con el controlador de register simplemente creandolo y recibiendo la data enviada por el usuario.
--Introducir el concepto de middleware y crear los middlewares necesarios en la ruta.
--Hacer notar los status code
--Terminar de armar el controlador de register realizando console.log() cuando sea necesario para otorgarle ayuda visual al alumno.
--Hacer hincapié en cómo llegan los headers, creacion de crypt y qué pasaría si queda algún error sin controlar.
--Hacer notar que aún nos falta crear el código y enviar el mail con el código, lo cual haremos la siguiente clase.
+Para utilizar nodemailer se recomienda crear previamente una nueva casilla de gmail para trabajar con la misma.
+
+-Hablar sobre nodemailer y configurar el mailer.ts.
+
+-Aplicar en el controlador del register.
+
+\*A tener en cuenta: Si se pone como contraseña la contraseña del mail, al querer utilizar nodemailer, el mismo arrojara un error. Es totalmente normal por seguridad de gmail. Seguir el link que nos provee el error y seguir los pasos. Básicamente, vamos a tener que habilitar la autenticacion en dos pasos y luego ir a la opcion de generar clave para aplicaciones, esta clave es la que tenemos que poner en la configuracion del mailer. Probablemente el mail que enviemos llegue a spam. Explicar que esto se debe a dos factores. El servidor del cual enviamos el mail (localhost) y el cuerpo del mismo, al cual le falta trabajo.
+
+-Crear controlador de login para que reciba la data del usuario.
+
+-No olvidar crear el router y middlewares necesarios. (Esto se recomienda ni bien se crea el controlador, cuando solo estamos recibiendo y, tal vez, logueando la data del front).
+
+-Crear controlador de verifyUser.
+
+-No olvidar crear el router y middlewares necesarios. (Esto se recomienda ni bien se crea el controlador, cuando solo estamos recibiendo y, tal vez, logueando la data del front).
+
+SI POR ALGUN MOTIVO NO SE LLEGA A TERMINAR CON LOS TEMAS EN ESTA CLASE, QUEDA AUN UNA CLASE MAS PARA TERMINAR DE DESARROLLARLOS.
