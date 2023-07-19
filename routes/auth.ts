@@ -37,8 +37,8 @@ router.post(
 router.patch(
 	"/verify",
 	[
-		check("email", "El email es requerido"),
-		check("code", "El código de verificación es requerido")
+		check("email", "El email es requerido").not().isEmpty(),
+		check("code", "El código de verificación es requerido").not().isEmpty()
 	],
 	verifyUser
 )
