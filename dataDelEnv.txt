@@ -1,4 +1,4 @@
-DATABASE_URL= Direccion de la DB
+DB_URL= Direccion de la DB
 
 PORT=8080
 
